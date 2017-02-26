@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 public class FileDialog implements ActionListener{
 	Object button;
 	JFrame frame;
+    JFileChooser chooser = new JFileChooser(); 
+
 	public FileDialog(JFrame frame, Object button){
 		this.button = button;
 		this.frame = frame;
@@ -16,9 +18,7 @@ public class FileDialog implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		 int result;
 	        
-		    JFileChooser chooser = new JFileChooser(); 
 		    chooser.setCurrentDirectory(new java.io.File("."));
 		    chooser.setDialogTitle("Title");
 		    chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
